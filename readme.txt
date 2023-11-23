@@ -44,7 +44,7 @@ This plugin is a bridge between your [WooCommerce](https://wordpress.org/plugins
 
 **Demo Site** [Link](https://wc.wpappsdev.com/shop/)
 
-**Check submitted Data** [Google Sheet URL](https://docs.google.com/spreadsheets/d/1jcN2Yrj52ickEQ_PZYg3e0EIqn16pvSgv4OMmUmzSEg/edit#gid=0)
+**Check submitted Data** [Google Sheet URL](https://docs.google.com/spreadsheets/d/1CF8z0fqtnW-OkFOJwlMJphCIM5FuBBHfOaNaIUjVpbk/edit#gid=0)
 
 = HOW TO USE THIS PLUGIN =
 
