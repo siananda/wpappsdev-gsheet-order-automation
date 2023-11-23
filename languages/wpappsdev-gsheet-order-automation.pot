@@ -1,0 +1,295 @@
+# Blank WordPress Pot
+# Copyright 2014 ...
+# This file is distributed under the GNU General Public License v3 or later.
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: "
+"WPAppsDev - GSheet Order "
+"Automation\n"
+"Report-Msgid-Bugs-To: "
+"Translator Name "
+"<translations@example."
+"com>\n"
+"POT-Creation-Date: "
+"2023-09-10 23:43+0600\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Your "
+"Name <you@example.com>\n"
+"Language-Team: WpAppsDev "
+"<anandacsebd@gmail.com>\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/"
+"plain; charset=UTF-8\n"
+"Content-Transfer-"
+"Encoding: 8bit\n"
+"Plural-Forms: "
+"nplurals=2; plural=n != "
+"1;\n"
+"X-Textdomain-Support: "
+"yesX-Generator: Poedit "
+"1.6.4\n"
+"X-Poedit-SourceCharset: "
+"UTF-8\n"
+"X-Poedit-KeywordsList: "
+"__;_e;esc_html_e;"
+"esc_html_x:1,2c;"
+"esc_html__;esc_attr_e;"
+"esc_attr_x:1,2c;"
+"esc_attr__;_ex:1,2c;"
+"_nx:4c,1,2;"
+"_nx_noop:4c,1,2;_x:1,2c;"
+"_n:1,2;_n_noop:1,2;"
+"__ngettext:1,2;"
+"__ngettext_noop:1,2;_c,"
+"_nc:4c,1,2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Generator: Poedit "
+"3.3.2\n"
+"X-Poedit-"
+"SearchPath-0: .\n"
+
+#: includes/Admin/WcSettings.php:27
+msgid "Google Sheets"
+msgstr ""
+
+#: includes/Admin/WcSettings.php:64
+msgid ""
+"Google Sheets "
+"Integration Settings"
+msgstr ""
+
+#: includes/Admin/WcSettings.php:70
+msgid ""
+"The following system "
+"configuration are "
+"required to use the "
+"plugin. Please check "
+"this "
+msgstr ""
+
+#: includes/Admin/WcSettings.php:72
+msgid "documentation"
+msgstr ""
+
+#: includes/Admin/WcSettings.php:73
+msgid ""
+"to understand how to "
+"setup a Google project "
+"for Client ID and Client "
+"secret."
+msgstr ""
+
+#: includes/Admin/WcSettings.php:77
+msgid ""
+"Set your authorize "
+"redirect uri"
+msgstr ""
+
+#: includes/Admin/WcSettings.php:79
+msgid ""
+"in your Google OAuth 2.0 "
+msgstr ""
+
+#: includes/Admin/WcSettings.php:81
+msgid ""
+"Credentials settings"
+msgstr ""
+
+#: includes/Admin/WcSettings.php:82
+msgid "for redirects"
+msgstr ""
+
+#: includes/Admin/WcSettings.php:88
+#: includes/Admin/WcSettings.php:91
+msgid "Client ID"
+msgstr ""
+
+#: includes/Admin/WcSettings.php:97
+#: includes/Admin/WcSettings.php:100
+msgid "Client Secret"
+msgstr ""
+
+#: includes/Admin/WcSettings.php:109
+msgid "Google Oauth"
+msgstr ""
+
+#: includes/Admin/WcSettings.php:112
+msgid ""
+"Your account is not "
+"connected with Google "
+"Account. Connect your "
+"Google account to "
+"synchronize google sheet."
+msgstr ""
+
+#: includes/Admin/WcSettings.php:114
+msgid ""
+"Connect Google Oauth"
+msgstr ""
+
+#: includes/Admin/WcSettings.php:124
+msgid "Disconnect"
+msgstr ""
+
+#: includes/Admin/WcSettings.php:125
+msgid ""
+"Your account is "
+"connected with Google "
+"Account."
+msgstr ""
+
+#: includes/Admin/WcSettings.php:134
+#: includes/Admin/WcSettings.php:137
+msgid "SpreadSheets Title"
+msgstr ""
+
+#: includes/Admin/WcSettings.php:141
+msgid "Spreadsheets"
+msgstr ""
+
+#: includes/Admin/WcSettings.php:144
+msgid ""
+"Create SpreadSheets and "
+"link spreadsheets with "
+"this system."
+msgstr ""
+
+#: includes/Admin/WcSettings.php:146
+msgid "Create SpreadSheet"
+msgstr ""
+
+#: includes/Admin/WcSettings.php:155
+msgid "SpreadSheet Link"
+msgstr ""
+
+#: includes/Admin/WcSettings.php:156
+msgid "Unlink & Removed"
+msgstr ""
+
+#: includes/Admin/WcSettings.php:158
+msgid ""
+"Unlink spreadsheet with "
+"this system."
+msgstr ""
+
+#: includes/Admin/WcSettings.php:165
+#: includes/Admin/WcSettings.php:168
+msgid "Google Sheet ID"
+msgstr ""
+
+#: includes/Admin/WcSettings.php:173
+msgid ""
+"SpreadSheet Column Data"
+msgstr ""
+
+#: includes/Admin/WcSettings.php:179
+msgid ""
+"Label BackGround Color"
+msgstr ""
+
+#: includes/Admin/WcSettings.php:185
+msgid "Label Text Color"
+msgstr ""
+
+#: includes/Ajax.php:45
+#: includes/Ajax.php:92
+#: includes/Ajax.php:132
+#: includes/Ajax.php:161
+#: includes/Ajax.php:203
+msgid "Are you cheating?"
+msgstr ""
+
+#: includes/Api/SpreadSheets.php:66
+#, php-format
+msgid ""
+"Could not create "
+"spreadsheet. Error: %s"
+msgstr ""
+
+#: includes/functions-helper.php:130
+#, php-format
+msgid "%s does not exist."
+msgstr ""
+
+#: includes/functions-helper.php:148
+msgid ""
+"action_args should not "
+"be overwritten when "
+"calling "
+"wpadgsoauto_get_template."
+msgstr ""
+
+#: includes/functions-helper.php:312
+msgid "Order Date"
+msgstr ""
+
+#: includes/functions-helper.php:313
+msgid "Customer Name"
+msgstr ""
+
+#: includes/functions-helper.php:314
+msgid "Order number"
+msgstr ""
+
+#: includes/functions-helper.php:315
+msgid "Customer Address"
+msgstr ""
+
+#: includes/functions-helper.php:316
+msgid "Products"
+msgstr ""
+
+#: includes/functions-helper.php:317
+msgid "Order Total"
+msgstr ""
+
+#: templates/admin/admin-notice.php:2
+msgid ""
+"Required plugin notice "
+"for WPAppsDev - GSheet "
+"Order Automation"
+msgstr ""
+
+#: templates/admin/admin-notice.php:8
+#, php-format
+msgid ""
+"You just need to "
+"activate the %s to make "
+"it functional."
+msgstr ""
+
+#: templates/admin/admin-notice.php:13
+msgid ""
+"Activate this plugin"
+msgstr ""
+
+#: templates/admin/admin-notice.php:13
+msgid "Activate"
+msgstr ""
+
+#: templates/admin/admin-notice.php:16
+msgid ""
+"You just need to install "
+"& active the WooCommerce "
+"to make it functional."
+msgstr ""
+
+#: templates/admin/repeatable.php:24
+msgid "Add Column"
+msgstr ""
+
+#: templates/admin/sheet-label-actions.php:8
+msgid ""
+"Set SpreadSheet Label"
+msgstr ""
+
+#: templates/admin/sheet-label-actions.php:11
+msgid ""
+"Reset SpreadSheet Label"
+msgstr ""
+
+#: wpappsdev-gsheet-order-automation.php:226
+msgid "Configure"
+msgstr ""
