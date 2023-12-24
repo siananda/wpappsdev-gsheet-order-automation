@@ -7,6 +7,8 @@ defined( 'ABSPATH' ) || exit;
 use Exception;
 use Gsheet\Gsheet;
 use WPAppsDev\GSOA\Traits\ChainableContainer;
+use Google\Service\Drive;
+use Google\Service\Sheets;
 
 /**
  * Configuration handler class
@@ -126,12 +128,18 @@ class GsheetConfig {
 	 */
 	public static function get_scopes() {
 		return [
-			'https://www.googleapis.com/auth/drive',
-			'https://www.googleapis.com/auth/drive.file',
-			'https://www.googleapis.com/auth/drive.readonly',
-			'https://www.googleapis.com/auth/spreadsheets',
-			'https://www.googleapis.com/auth/spreadsheets.readonly',
-			'https://www.googleapis.com/auth/drive.appdata',
+			/** See, edit, create, and delete all of your Google Drive files. */
+			Drive::DRIVE,
+			/** See, edit, create, and delete only the specific Google Drive files you use with this app. */
+			Drive::DRIVE_FILE,
+			/** See and download all your Google Drive files. */
+			Drive::DRIVE_READONLY,
+			/** See, create, and delete its own configuration data in your Google Drive. */
+			Drive::DRIVE_APPDATA,
+			/** See, edit, create, and delete all your Google Sheets spreadsheets. */
+			Sheets::SPREADSHEETS,
+			/** See all your Google Sheets spreadsheets. */
+			Sheets::SPREADSHEETS_READONLY,
 		];
 	}
 

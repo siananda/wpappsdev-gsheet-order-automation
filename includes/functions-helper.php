@@ -28,7 +28,7 @@ function wpadgsoauto_print( $data ) {
 	if ( is_array( $data ) || is_object( $data ) ) {
 		print_r( $data ); // phpcs:ignore
 	} else {
-		echo wc_clean( $data ); // phpcs:ignore
+		echo sanitize_text_field( $data ); // phpcs:ignore
 	}
 	echo '</pre>';
 }
@@ -288,7 +288,7 @@ function wpadgsoauto_is_repeatable_empty( $data ) {
  *
  * @return string
  */
-function get_sheet_title() {
+function wpadgsoauto_get_sheet_title() {
 	return apply_filters( 'wpadgsoauto_work_sheet_title', 'Year' . gmdate( 'Y' ) );
 }
 
@@ -299,7 +299,7 @@ function get_sheet_title() {
  *
  * @return array
  */
-function convert_hex_to_rgb( $hex_value ) {
+function wpadgsoauto_convert_hex_to_rgb( $hex_value ) {
 	$trimmed_string                = ltrim( $hex_value, '#' );
 	list( $ired, $igreen, $iblue ) = array_map( 'hexdec', str_split( $trimmed_string, 2 ) );
 
@@ -311,7 +311,7 @@ function convert_hex_to_rgb( $hex_value ) {
  *
  * @return array
  */
-function gsheet_columns() {
+function wpadgsoauto_gsheet_columns() {
 	$gsheet_columns = [
 		'order_date'    => __( 'Order Date', 'wpappsdev-gsheet-order-automation' ),
 		'customer_name' => __( 'Customer Name', 'wpappsdev-gsheet-order-automation' ),
@@ -329,7 +329,7 @@ function gsheet_columns() {
  *
  * @return void
  */
-function reset_gsheet_configuration() {
+function wpadgsoauto_reset_gsheet_config() {
 	// Remove Spreadsheet ID and URL.
 	GsheetSettings::set_spreadsheets_id( '' );
 	GsheetSettings::set_spreadsheets_url( '' );

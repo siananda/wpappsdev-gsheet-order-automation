@@ -1,5 +1,10 @@
 <?php
-
+/**
+ * The log related functionality of the plugin.
+ *
+ * @package WPAppsDev\GSOA
+ * @author Saiful Islam Ananda
+ */
 namespace WPAppsDev\GSOA;
 
 /**

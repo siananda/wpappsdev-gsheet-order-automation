@@ -208,7 +208,7 @@ class SpreadSheets extends Api {
 		}
 
 		if ( '' === $title ) {
-			$title = get_sheet_title();
+			$title = wpadgsoauto_get_sheet_title();
 		}
 
 		$title_prop = new SheetProperties();
@@ -284,7 +284,7 @@ class SpreadSheets extends Api {
 		$range->setStartColumnIndex( 0 );
 
 		// set label background color value in RGBA.
-		$bg_color_value = convert_hex_to_rgb( GsheetSettings::get_label_bg_color() );
+		$bg_color_value = wpadgsoauto_convert_hex_to_rgb( GsheetSettings::get_label_bg_color() );
 		$bg_color       = new Color();
 
 		if ( count( $bg_color_value ) === 3 ) {
@@ -301,7 +301,7 @@ class SpreadSheets extends Api {
 		}
 
 		// Set label text color value in RGBA.
-		$fg_color_value = convert_hex_to_rgb( GsheetSettings::get_label_text_color() );
+		$fg_color_value = wpadgsoauto_convert_hex_to_rgb( GsheetSettings::get_label_text_color() );
 		$fg_color       = new Color();
 
 		if ( count( $fg_color_value ) === 3 ) {
@@ -381,7 +381,7 @@ class SpreadSheets extends Api {
 	 * @return mixed
 	 */
 	public static function add_order_row_data( $spreadsheet_id, $data ) {
-		$range  = get_sheet_title();
+		$range  = wpadgsoauto_get_sheet_title();
 		$params = [
 			'valueInputOption' => 'USER_ENTERED',
 		];

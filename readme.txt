@@ -40,31 +40,29 @@ This plugin is a bridge between your [WooCommerce](https://wordpress.org/plugins
 7. **Time and Cost Savings:** By automating order management, you'll free up valuable time and resources that can be better utilized in growing your business. Say goodbye to data entry tasks and hello to increased productivity and efficiency.
 
 
-= CHECK LIVE DEMO =
+== CHECK LIVE DEMO ==
 
 **Demo Site** [Link](https://wc.wpappsdev.com/shop/)
 
-**Check submitted Data** [Google Sheet URL](https://docs.google.com/spreadsheets/d/1CF8z0fqtnW-OkFOJwlMJphCIM5FuBBHfOaNaIUjVpbk/edit#gid=0)
+**Check submitted Data** [Google Sheet URL](https://docs.google.com/spreadsheets/d/1jcN2Yrj52ickEQ_PZYg3e0EIqn16pvSgv4OMmUmzSEg/edit#gid=0)
 
-= HOW TO USE THIS PLUGIN =
+== HOW TO USE THIS PLUGIN ==
 
-Step: 1 – LogIn [Google Sheets](https://sheets.google.com/)
+Step: 1 – LogIn [Google Account](https://google.com/)
 
-➜ Log into your Google Sheets.
+➜ Log into your Google Account.
+➜ Create a new Google Project. [How to create project?](https://developers.google.com/workspace/guides/create-project)
 
 Step: 2 – In WordPress Admin
 
 ➜ Navigate to WooCommerce > Settings > Google Sheet
-
+➜ Fill Up Google settings information from your created Google project.
 ➜ Authenticate with Google using Google Oauth
-
 ➜ Make Sure to ALLOW Google Permissions for Google Drive and Google Sheets
-
 ➜ Now create new spreadsheet from settings panel
-
 ➜ Add spreadsheet label and save.
 
-= Plugin Configuration =
+== Plugin Configuration ==
 
 [youtube https://www.youtube.com/watch?v=NqXQtHCnSmk]
 

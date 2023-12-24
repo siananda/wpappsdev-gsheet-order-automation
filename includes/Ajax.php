@@ -1,4 +1,10 @@
 <?php
+/**
+ * The ajax related functionality of the plugin.
+ *
+ * @package WPAppsDev\GSOA
+ * @author Saiful Islam Ananda
+ */
 
 namespace WPAppsDev\GSOA;
 
@@ -33,12 +39,8 @@ class Ajax {
 	 * @return void
 	 */
 	public function add_google_spreadsheets_process() {
-		$post_data = wc_clean( $_POST );
-		$nonce     = isset( $post_data['_nonce'] ) ? wc_clean( $post_data['_nonce'] ) : '';
-		$title     = isset( $post_data['title'] ) ? wc_clean( $post_data['title'] ) : '';
-
 		// Nonce protection.
-		if ( ! wp_verify_nonce( $nonce, 'wpadgsoauto-admin-security' ) ) {
+		if ( ! wp_verify_nonce( sanitize_text_field( $_POST['_nonce'] ?? '' ), 'wpadgsoauto-admin-security' ) ) {
 			wp_send_json_error(
 				[
 					'type'    => 'nonce',
@@ -48,6 +50,8 @@ class Ajax {
 
 			wp_die();
 		}
+
+		$title = isset( $_POST['title'] ) ? sanitize_text_field( $_POST['title'] ) : '';
 
 		try {
 			$args = [
@@ -80,12 +84,8 @@ class Ajax {
 	 * @return void
 	 */
 	public function set_spreadsheets_label_process() {
-		$post_data      = wc_clean( $_POST );
-		$nonce          = isset( $post_data['_nonce'] ) ? wc_clean( $post_data['_nonce'] ) : '';
-		$spreadsheet_id = isset( $post_data['spreadsheet_id'] ) ? wc_clean( $post_data['spreadsheet_id'] ) : '';
-
 		// Nonce protection.
-		if ( ! wp_verify_nonce( $nonce, 'wpadgsoauto-admin-security' ) ) {
+		if ( ! wp_verify_nonce( sanitize_text_field( $_POST['_nonce'] ?? '' ), 'wpadgsoauto-admin-security' ) ) {
 			wp_send_json_error(
 				[
 					'type'    => 'nonce',
@@ -95,6 +95,8 @@ class Ajax {
 
 			wp_die();
 		}
+
+		$spreadsheet_id = isset( $_POST['spreadsheet_id'] ) ? sanitize_text_field( $_POST['spreadsheet_id'] ) : '';
 
 		try {
 			// Set spreadsheet cells label.
@@ -121,11 +123,8 @@ class Ajax {
 	 * @return void
 	 */
 	public function gsheet_reset_label_process() {
-		$post_data = wc_clean( $_POST );
-		$nonce     = isset( $post_data['_nonce'] ) ? wc_clean( $post_data['_nonce'] ) : '';
-
 		// Nonce protection.
-		if ( ! wp_verify_nonce( $nonce, 'wpadgsoauto-admin-security' ) ) {
+		if ( ! wp_verify_nonce( sanitize_text_field( $_POST['_nonce'] ?? '' ), 'wpadgsoauto-admin-security' ) ) {
 			wp_send_json_error(
 				[
 					'type'    => 'nonce',
@@ -148,13 +147,8 @@ class Ajax {
 	 * @return void
 	 */
 	public function unlink_google_spreadsheets_process() {
-		$post_data         = wc_clean( $_POST );
-		$nonce             = isset( $post_data['_nonce'] ) ? wc_clean( $post_data['_nonce'] ) : '';
-		$spreadsheet_id    = isset( $post_data['spreadsheet_id'] ) ? wc_clean( $post_data['spreadsheet_id'] ) : '';
-		$delete_from_drive = isset( $post_data['delete_spreadsheet_from_drive'] ) ? wc_clean( $post_data['delete_spreadsheet_from_drive'] ) : '';
-
 		// Nonce protection.
-		if ( ! wp_verify_nonce( $nonce, 'wpadgsoauto-admin-security' ) ) {
+		if ( ! wp_verify_nonce( sanitize_text_field( $_POST['_nonce'] ?? '' ), 'wpadgsoauto-admin-security' ) ) {
 			wp_send_json_error(
 				[
 					'type'    => 'nonce',
@@ -165,8 +159,11 @@ class Ajax {
 			wp_die();
 		}
 
+		$spreadsheet_id    = isset( $_POST['spreadsheet_id'] ) ? sanitize_text_field( $_POST['spreadsheet_id'] ) : '';
+		$delete_from_drive = isset( $_POST['delete_spreadsheet_from_drive'] ) ? sanitize_text_field( $_POST['delete_spreadsheet_from_drive'] ) : '';
+
 		try {
-			reset_gsheet_configuration();
+			wpadgsoauto_reset_gsheet_config();
 
 			// Delete SpreadSheet From Drive on user preference.
 			if ( true === $delete_from_drive ) {
@@ -192,11 +189,8 @@ class Ajax {
 	 * @return void
 	 */
 	public function gsheet_disconnect_auth_process() {
-		$post_data = wc_clean( $_POST );
-		$nonce     = isset( $post_data['_nonce'] ) ? wc_clean( $post_data['_nonce'] ) : '';
-
 		// Nonce protection.
-		if ( ! wp_verify_nonce( $nonce, 'wpadgsoauto-admin-security' ) ) {
+		if ( ! wp_verify_nonce( sanitize_text_field( $_POST['_nonce'] ?? '' ), 'wpadgsoauto-admin-security' ) ) {
 			wp_send_json_error(
 				[
 					'type'    => 'nonce',

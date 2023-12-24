@@ -43,7 +43,7 @@ class WcSettingsFields {
 	public function repeatable_field( $value ) {
 		$args = [
 			'value'          => $value,
-			'gsheet_columns' => gsheet_columns(),
+			'gsheet_columns' => wpadgsoauto_gsheet_columns(),
 			'columns'        => GsheetSettings::get_sheets_columns_data(),
 			'is_set_label'   => GsheetSettings::is_set_sheet_label(),
 		];

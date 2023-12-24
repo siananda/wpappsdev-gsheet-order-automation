@@ -1,3 +1,4 @@
+<?php if ( ! defined( 'ABSPATH' ) ) exit; ?>
 <div class="updated" id="installer-notice" style="padding: 1em; position: relative;">
 	<h2><?php esc_html_e( 'Required plugin notice for WPAppsDev - GSheet Order Automation', 'wpappsdev-gsheet-order-automation' ); ?></h2>
 	<?php if ( file_exists( WP_PLUGIN_DIR . '/' . $core_plugin_file ) && is_plugin_inactive( 'woocommerce/woocommerce.php' ) ) { ?>
